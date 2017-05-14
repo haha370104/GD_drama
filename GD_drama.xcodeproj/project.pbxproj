@@ -22,13 +22,15 @@
 		750813121EC8684300901868 /* GDHttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813111EC8684300901868 /* GDHttpSessionManager.m */; };
 		750813171EC87C7700901868 /* GDUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813161EC87C7700901868 /* GDUserManager.m */; };
 		7508131B1EC87CD300901868 /* GDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508131A1EC87CD300901868 /* GDUser.m */; };
+		750813201EC882BE00901868 /* GDFakeSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508131F1EC882BE00901868 /* GDFakeSearchBarView.m */; };
+		750813241EC88FB300901868 /* GDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813231EC88FB300901868 /* GDSearchViewController.m */; };
 		7591A6651EAF1E320078F436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6641EAF1E320078F436 /* main.m */; };
 		7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6671EAF1E320078F436 /* AppDelegate.m */; };
 		7591A6701EAF1E320078F436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7591A66F1EAF1E320078F436 /* Assets.xcassets */; };
 		7591A67E1EAF1E320078F436 /* GD_dramaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A67D1EAF1E320078F436 /* GD_dramaTests.m */; };
 		7591A6891EAF1E320078F436 /* GD_dramaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6881EAF1E320078F436 /* GD_dramaUITests.m */; };
 		75D3F2CB1EC8560B007CA5A9 /* GDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2CA1EC8560B007CA5A9 /* GDTabBarController.m */; };
-		75D3F2D01EC856A4007CA5A9 /* GDMainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2CF1EC856A4007CA5A9 /* GDMainPageController.m */; };
+		75D3F2D01EC856A4007CA5A9 /* GDHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2CF1EC856A4007CA5A9 /* GDHomePageController.m */; };
 		75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */; };
 		75D3F2D61EC856E5007CA5A9 /* GDMyFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D51EC856E5007CA5A9 /* GDMyFavoriteController.m */; };
 		75D3F2D91EC856F6007CA5A9 /* GDUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */; };
@@ -84,6 +86,10 @@
 		750813161EC87C7700901868 /* GDUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUserManager.m; sourceTree = "<group>"; };
 		750813191EC87CD300901868 /* GDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUser.h; sourceTree = "<group>"; };
 		7508131A1EC87CD300901868 /* GDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUser.m; sourceTree = "<group>"; };
+		7508131E1EC882BE00901868 /* GDFakeSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDFakeSearchBarView.h; sourceTree = "<group>"; };
+		7508131F1EC882BE00901868 /* GDFakeSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDFakeSearchBarView.m; sourceTree = "<group>"; };
+		750813221EC88FB300901868 /* GDSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDSearchViewController.h; sourceTree = "<group>"; };
+		750813231EC88FB300901868 /* GDSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDSearchViewController.m; sourceTree = "<group>"; };
 		7591A6601EAF1E320078F436 /* GD_drama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GD_drama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A6641EAF1E320078F436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7591A6661EAF1E320078F436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,8 +104,8 @@
 		7591A68A1EAF1E320078F436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75D3F2C91EC8560B007CA5A9 /* GDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTabBarController.h; sourceTree = "<group>"; };
 		75D3F2CA1EC8560B007CA5A9 /* GDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDTabBarController.m; sourceTree = "<group>"; };
-		75D3F2CE1EC856A4007CA5A9 /* GDMainPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMainPageController.h; sourceTree = "<group>"; };
-		75D3F2CF1EC856A4007CA5A9 /* GDMainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainPageController.m; sourceTree = "<group>"; };
+		75D3F2CE1EC856A4007CA5A9 /* GDHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDHomePageController.h; sourceTree = "<group>"; };
+		75D3F2CF1EC856A4007CA5A9 /* GDHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDHomePageController.m; sourceTree = "<group>"; };
 		75D3F2D11EC856C3007CA5A9 /* GDDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDownloadController.h; sourceTree = "<group>"; };
 		75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDownloadController.m; sourceTree = "<group>"; };
 		75D3F2D41EC856E5007CA5A9 /* GDMyFavoriteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMyFavoriteController.h; sourceTree = "<group>"; };
@@ -186,9 +192,9 @@
 		750812F71EC861A800901868 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7508131D1EC8828C00901868 /* Animate */,
+				7508131C1EC8828300901868 /* Search */,
 				750813011EC8654B00901868 /* Cell */,
-				750812F81EC861B100901868 /* GDActivityIndicatorView.h */,
-				750812F91EC861B100901868 /* GDActivityIndicatorView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -243,6 +249,33 @@
 				7508131A1EC87CD300901868 /* GDUser.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7508131C1EC8828300901868 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7508131E1EC882BE00901868 /* GDFakeSearchBarView.h */,
+				7508131F1EC882BE00901868 /* GDFakeSearchBarView.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		7508131D1EC8828C00901868 /* Animate */ = {
+			isa = PBXGroup;
+			children = (
+				750812F81EC861B100901868 /* GDActivityIndicatorView.h */,
+				750812F91EC861B100901868 /* GDActivityIndicatorView.m */,
+			);
+			name = Animate;
+			sourceTree = "<group>";
+		};
+		750813211EC88F9F00901868 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				750813221EC88FB300901868 /* GDSearchViewController.h */,
+				750813231EC88FB300901868 /* GDSearchViewController.m */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		7591A6571EAF1E320078F436 = {
@@ -312,6 +345,7 @@
 		75D3F2C51EC85575007CA5A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				750813211EC88F9F00901868 /* Search */,
 				750813081EC8663200901868 /* Login */,
 				75D3F2CD1EC85684007CA5A9 /* MainPage */,
 				75D3F2CC1EC8566E007CA5A9 /* TabBar */,
@@ -331,8 +365,8 @@
 		75D3F2CD1EC85684007CA5A9 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				75D3F2CE1EC856A4007CA5A9 /* GDMainPageController.h */,
-				75D3F2CF1EC856A4007CA5A9 /* GDMainPageController.m */,
+				75D3F2CE1EC856A4007CA5A9 /* GDHomePageController.h */,
+				75D3F2CF1EC856A4007CA5A9 /* GDHomePageController.m */,
 				75D3F2D11EC856C3007CA5A9 /* GDDownloadController.h */,
 				75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */,
 				75D3F2D41EC856E5007CA5A9 /* GDMyFavoriteController.h */,
@@ -529,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				750812F01EC8605400901868 /* NSObject+GDTypeCheck.m in Sources */,
+				750813201EC882BE00901868 /* GDFakeSearchBarView.m in Sources */,
 				750812FD1EC8620B00901868 /* UIColor+GDTheme.m in Sources */,
 				75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */,
 				750812F61EC8618600901868 /* UIWindow+MainWindow.m in Sources */,
@@ -545,7 +580,8 @@
 				750812FA1EC861B100901868 /* GDActivityIndicatorView.m in Sources */,
 				7508131B1EC87CD300901868 /* GDUser.m in Sources */,
 				7508130B1EC8664C00901868 /* GDRegisterController.m in Sources */,
-				75D3F2D01EC856A4007CA5A9 /* GDMainPageController.m in Sources */,
+				75D3F2D01EC856A4007CA5A9 /* GDHomePageController.m in Sources */,
+				750813241EC88FB300901868 /* GDSearchViewController.m in Sources */,
 				750812E81EC85DD700901868 /* GDLoginController.m in Sources */,
 				7508130E1EC867E200901868 /* GDUserAPI.m in Sources */,
 				7591A6651EAF1E320078F436 /* main.m in Sources */,

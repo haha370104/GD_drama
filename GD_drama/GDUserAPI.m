@@ -28,9 +28,9 @@
     }];
 }
 
-+ (void)registerWithPhoneNum:(NSString *)phoneNum smsCode:(NSString *)smsCode password:(NSString *)password name:(NSString *)name complete:( void (^) (NSDictionary *response, BOOL success) )complete
++ (void)registerWithPhoneNum:(NSString *)phoneNum smsCode:(NSString *)smsCode password:(NSString *)password email:(NSString *)email complete:( void (^) (NSDictionary *response, BOOL success) )complete
 {
-    [[GDHttpSessionManager shareManager] postRequestByUrl:kGDAPI_REGISTER_URL params:@{@"mobile":phoneNum, @"smsCode":smsCode, @"password":password, @"name":name} success:^(NSURLSessionDataTask *task, id data) {
+    [[GDHttpSessionManager shareManager] postRequestByUrl:kGDAPI_REGISTER_URL params:@{@"mobile":phoneNum, @"smsCode":smsCode, @"password":password, @"email":email} success:^(NSURLSessionDataTask *task, id data) {
         if (complete) {
             complete(data, YES);
         }

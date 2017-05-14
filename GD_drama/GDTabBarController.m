@@ -7,7 +7,7 @@
 //
 
 #import "GDTabBarController.h"
-#import "GDMainPageController.h"
+#import "GDHomePageController.h"
 #import "GDDownloadController.h"
 #import "GDMyFavoriteController.h"
 #import "GDUserInfoController.h"
@@ -37,9 +37,9 @@
         GDLoginController *loginController = [[GDLoginController alloc] init];
         UINavigationController *loginNavigationController = [[UINavigationController alloc] initWithRootViewController:loginController];
         loginNavigationController.navigationBar.topItem.title = @"登陆";
-        [self presentViewController:loginNavigationController animated:YES completion:^{
-            [MBProgressHUD showErrorState:@"请先登录!" inView:nil];
-        }];
+//        [self presentViewController:loginNavigationController animated:YES completion:^{
+//            [MBProgressHUD showErrorState:@"请先登录!" inView:nil];
+//        }];
     }
 }
 
@@ -47,9 +47,11 @@
 
 - (void)setupTabBarItem
 {
-    GDMainPageController *mainController = [[GDMainPageController alloc] init];
+    GDHomePageController *mainController = [[GDHomePageController alloc] init];
     mainController.tabBarItem.title = @"首页";
     mainController.tabBarItem.image = [UIImage imageNamed:@"home"];
+    UINavigationController *mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainController];
+    mainNavigationController.navigationBar.topItem.title = @"首页";
 
     GDDownloadController *downloadController = [[GDDownloadController alloc] init];
     downloadController.tabBarItem.title = @"下载";
@@ -67,7 +69,7 @@
     userInfoController.tabBarItem.title = @"我的";
     userInfoController.tabBarItem.image = [UIImage imageNamed:@"userinfo"];
 
-    self.viewControllers = @[mainController, downloadNavigationController, favoriteNavigationController, userInfoController];
+    self.viewControllers = @[mainNavigationController, downloadNavigationController, favoriteNavigationController, userInfoController];
 }
 
 @end

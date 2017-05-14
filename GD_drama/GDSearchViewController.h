@@ -1,5 +1,5 @@
 //
-//  GDMainPageController.h
+//  GDSearchViewController.h
 //  GD_drama
 //
 //  Created by 罗向宇 on 2017/5/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GDMainPageController : UIViewController
+@interface GDSearchViewController : UIViewController
 
 @end

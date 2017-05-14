@@ -27,7 +27,7 @@
 
 @property (nonatomic, strong) NSString *phoneNum;
 @property (nonatomic, strong) NSString *smsCode;
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *password;
 
 @property (nonatomic, assign) BOOL showPassword;
@@ -110,7 +110,7 @@
         } break;
         case 3: {
             [cell setRightButtonView:nil];
-            cell.leftTextField.placeholder = @"姓名";
+            cell.leftTextField.placeholder = @"邮箱";
         } break;
         default:
             return nil;
@@ -182,7 +182,7 @@
             self.password = textField.text;
             break;
         case 3:
-            self.userName = textField.text;
+            self.email = textField.text;
             break;
         default:
             break;
@@ -269,11 +269,11 @@
         return;
     }
 
-    if (!self.userName.length) {
-        [MBProgressHUD showErrorState:@"姓名未填" inView:nil];
+    if (!self.email.length) {
+        [MBProgressHUD showErrorState:@"邮箱未填" inView:nil];
         return;
     }
-    [GDUserAPI registerWithPhoneNum:self.phoneNum smsCode:self.smsCode password:self.password name:self.userName complete:^(NSDictionary *response, BOOL success) {
+    [GDUserAPI registerWithPhoneNum:self.phoneNum smsCode:self.smsCode password:self.password email:self.email complete:^(NSDictionary *response, BOOL success) {
         if (success) {
             [MBProgressHUD showSuccessState:@"注册成功，请登录" inView:nil];
             [self.navigationController popViewControllerAnimated:YES];
