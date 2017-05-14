@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750812E81EC85DD700901868 /* GDLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812E71EC85DD700901868 /* GDLoginController.m */; };
+		750812EF1EC8605400901868 /* MBProgressHUD+GDProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812EC1EC8605400901868 /* MBProgressHUD+GDProgressHUD.m */; };
+		750812F01EC8605400901868 /* NSObject+GDTypeCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812EE1EC8605400901868 /* NSObject+GDTypeCheck.m */; };
+		750812F31EC860D100901868 /* NSObject+GDOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812F21EC860D100901868 /* NSObject+GDOperation.m */; };
+		750812F61EC8618600901868 /* UIWindow+MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812F51EC8618600901868 /* UIWindow+MainWindow.m */; };
+		750812FA1EC861B100901868 /* GDActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812F91EC861B100901868 /* GDActivityIndicatorView.m */; };
+		750812FD1EC8620B00901868 /* UIColor+GDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812FC1EC8620B00901868 /* UIColor+GDTheme.m */; };
+		750813001EC8647A00901868 /* UIFont+GDTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 750812FF1EC8647A00901868 /* UIFont+GDTheme.m */; };
+		750813061EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813031EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m */; };
+		750813071EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813051EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m */; };
+		7508130B1EC8664C00901868 /* GDRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508130A1EC8664C00901868 /* GDRegisterController.m */; };
+		7508130E1EC867E200901868 /* GDUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508130D1EC867E200901868 /* GDUserAPI.m */; };
+		750813121EC8684300901868 /* GDHttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813111EC8684300901868 /* GDHttpSessionManager.m */; };
+		750813171EC87C7700901868 /* GDUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813161EC87C7700901868 /* GDUserManager.m */; };
+		7508131B1EC87CD300901868 /* GDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508131A1EC87CD300901868 /* GDUser.m */; };
 		7591A6651EAF1E320078F436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6641EAF1E320078F436 /* main.m */; };
 		7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6671EAF1E320078F436 /* AppDelegate.m */; };
 		7591A6701EAF1E320078F436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7591A66F1EAF1E320078F436 /* Assets.xcassets */; };
@@ -38,6 +53,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750812E61EC85DD700901868 /* GDLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLoginController.h; sourceTree = "<group>"; };
+		750812E71EC85DD700901868 /* GDLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDLoginController.m; sourceTree = "<group>"; };
+		750812EB1EC8605400901868 /* MBProgressHUD+GDProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GDProgressHUD.h"; sourceTree = "<group>"; };
+		750812EC1EC8605400901868 /* MBProgressHUD+GDProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+GDProgressHUD.m"; sourceTree = "<group>"; };
+		750812ED1EC8605400901868 /* NSObject+GDTypeCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GDTypeCheck.h"; sourceTree = "<group>"; };
+		750812EE1EC8605400901868 /* NSObject+GDTypeCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GDTypeCheck.m"; sourceTree = "<group>"; };
+		750812F11EC860D100901868 /* NSObject+GDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GDOperation.h"; sourceTree = "<group>"; };
+		750812F21EC860D100901868 /* NSObject+GDOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GDOperation.m"; sourceTree = "<group>"; };
+		750812F41EC8618600901868 /* UIWindow+MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+MainWindow.h"; sourceTree = "<group>"; };
+		750812F51EC8618600901868 /* UIWindow+MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+MainWindow.m"; sourceTree = "<group>"; };
+		750812F81EC861B100901868 /* GDActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDActivityIndicatorView.h; sourceTree = "<group>"; };
+		750812F91EC861B100901868 /* GDActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDActivityIndicatorView.m; sourceTree = "<group>"; };
+		750812FB1EC8620B00901868 /* UIColor+GDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GDTheme.h"; sourceTree = "<group>"; };
+		750812FC1EC8620B00901868 /* UIColor+GDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GDTheme.m"; sourceTree = "<group>"; };
+		750812FE1EC8647A00901868 /* UIFont+GDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GDTheme.h"; sourceTree = "<group>"; };
+		750812FF1EC8647A00901868 /* UIFont+GDTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GDTheme.m"; sourceTree = "<group>"; };
+		750813021EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLeftTextFieldRightCustomButtonTableViewCell.h; sourceTree = "<group>"; };
+		750813031EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDLeftTextFieldRightCustomButtonTableViewCell.m; sourceTree = "<group>"; };
+		750813041EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDLeftTitleRightTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		750813051EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDLeftTitleRightTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		750813091EC8664C00901868 /* GDRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDRegisterController.h; sourceTree = "<group>"; };
+		7508130A1EC8664C00901868 /* GDRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDRegisterController.m; sourceTree = "<group>"; };
+		7508130C1EC867E200901868 /* GDUserAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUserAPI.h; sourceTree = "<group>"; };
+		7508130D1EC867E200901868 /* GDUserAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUserAPI.m; sourceTree = "<group>"; };
+		750813101EC8684300901868 /* GDHttpSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDHttpSessionManager.h; sourceTree = "<group>"; };
+		750813111EC8684300901868 /* GDHttpSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDHttpSessionManager.m; sourceTree = "<group>"; };
+		750813131EC868FB00901868 /* GDApiUrls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDApiUrls.h; sourceTree = "<group>"; };
+		750813151EC87C7700901868 /* GDUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUserManager.h; sourceTree = "<group>"; };
+		750813161EC87C7700901868 /* GDUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUserManager.m; sourceTree = "<group>"; };
+		750813191EC87CD300901868 /* GDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUser.h; sourceTree = "<group>"; };
+		7508131A1EC87CD300901868 /* GDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUser.m; sourceTree = "<group>"; };
 		7591A6601EAF1E320078F436 /* GD_drama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GD_drama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A6641EAF1E320078F436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7591A6661EAF1E320078F436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +154,97 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		750812E91EC85FD000901868 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				750813141EC86ACC00901868 /* Manager */,
+				7508130F1EC867F200901868 /* APIs */,
+				750812EA1EC85FD800901868 /* Category */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		750812EA1EC85FD800901868 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				750812FE1EC8647A00901868 /* UIFont+GDTheme.h */,
+				750812FF1EC8647A00901868 /* UIFont+GDTheme.m */,
+				750812FB1EC8620B00901868 /* UIColor+GDTheme.h */,
+				750812FC1EC8620B00901868 /* UIColor+GDTheme.m */,
+				750812F41EC8618600901868 /* UIWindow+MainWindow.h */,
+				750812F51EC8618600901868 /* UIWindow+MainWindow.m */,
+				750812F11EC860D100901868 /* NSObject+GDOperation.h */,
+				750812F21EC860D100901868 /* NSObject+GDOperation.m */,
+				750812EB1EC8605400901868 /* MBProgressHUD+GDProgressHUD.h */,
+				750812EC1EC8605400901868 /* MBProgressHUD+GDProgressHUD.m */,
+				750812ED1EC8605400901868 /* NSObject+GDTypeCheck.h */,
+				750812EE1EC8605400901868 /* NSObject+GDTypeCheck.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		750812F71EC861A800901868 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				750813011EC8654B00901868 /* Cell */,
+				750812F81EC861B100901868 /* GDActivityIndicatorView.h */,
+				750812F91EC861B100901868 /* GDActivityIndicatorView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		750813011EC8654B00901868 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				750813021EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.h */,
+				750813031EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m */,
+				750813041EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.h */,
+				750813051EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		750813081EC8663200901868 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				750812E61EC85DD700901868 /* GDLoginController.h */,
+				750812E71EC85DD700901868 /* GDLoginController.m */,
+				750813091EC8664C00901868 /* GDRegisterController.h */,
+				7508130A1EC8664C00901868 /* GDRegisterController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		7508130F1EC867F200901868 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				7508130C1EC867E200901868 /* GDUserAPI.h */,
+				7508130D1EC867E200901868 /* GDUserAPI.m */,
+				750813101EC8684300901868 /* GDHttpSessionManager.h */,
+				750813111EC8684300901868 /* GDHttpSessionManager.m */,
+				750813131EC868FB00901868 /* GDApiUrls.h */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		750813141EC86ACC00901868 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				750813151EC87C7700901868 /* GDUserManager.h */,
+				750813161EC87C7700901868 /* GDUserManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		750813181EC87C7C00901868 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				750813191EC87CD300901868 /* GDUser.h */,
+				7508131A1EC87CD300901868 /* GDUser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7591A6571EAF1E320078F436 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +270,9 @@
 		7591A6621EAF1E320078F436 /* GD_drama */ = {
 			isa = PBXGroup;
 			children = (
+				750813181EC87C7C00901868 /* Model */,
+				750812F71EC861A800901868 /* View */,
+				750812E91EC85FD000901868 /* Utils */,
 				75D3F2C51EC85575007CA5A9 /* Controller */,
 				7591A6661EAF1E320078F436 /* AppDelegate.h */,
 				7591A6671EAF1E320078F436 /* AppDelegate.m */,
@@ -172,6 +312,7 @@
 		75D3F2C51EC85575007CA5A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				750813081EC8663200901868 /* Login */,
 				75D3F2CD1EC85684007CA5A9 /* MainPage */,
 				75D3F2CC1EC8566E007CA5A9 /* TabBar */,
 			);
@@ -387,13 +528,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750812F01EC8605400901868 /* NSObject+GDTypeCheck.m in Sources */,
+				750812FD1EC8620B00901868 /* UIColor+GDTheme.m in Sources */,
 				75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */,
+				750812F61EC8618600901868 /* UIWindow+MainWindow.m in Sources */,
 				75D3F2CB1EC8560B007CA5A9 /* GDTabBarController.m in Sources */,
+				750812EF1EC8605400901868 /* MBProgressHUD+GDProgressHUD.m in Sources */,
+				750813071EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m in Sources */,
+				750812F31EC860D100901868 /* NSObject+GDOperation.m in Sources */,
 				75D3F2D61EC856E5007CA5A9 /* GDMyFavoriteController.m in Sources */,
+				750813171EC87C7700901868 /* GDUserManager.m in Sources */,
 				75D3F2D91EC856F6007CA5A9 /* GDUserInfoController.m in Sources */,
 				7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */,
+				750813121EC8684300901868 /* GDHttpSessionManager.m in Sources */,
+				750813061EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m in Sources */,
+				750812FA1EC861B100901868 /* GDActivityIndicatorView.m in Sources */,
+				7508131B1EC87CD300901868 /* GDUser.m in Sources */,
+				7508130B1EC8664C00901868 /* GDRegisterController.m in Sources */,
 				75D3F2D01EC856A4007CA5A9 /* GDMainPageController.m in Sources */,
+				750812E81EC85DD700901868 /* GDLoginController.m in Sources */,
+				7508130E1EC867E200901868 /* GDUserAPI.m in Sources */,
 				7591A6651EAF1E320078F436 /* main.m in Sources */,
+				750813001EC8647A00901868 /* UIFont+GDTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

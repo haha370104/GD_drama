@@ -11,6 +11,11 @@
 #import "GDDownloadController.h"
 #import "GDMyFavoriteController.h"
 #import "GDUserInfoController.h"
+#import "GDLoginController.h"
+
+#import "GDUserManager.h"
+
+#import "MBProgressHUD+GDProgressHUD.h"
 
 @interface GDTabBarController ()
 
@@ -23,12 +28,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTabBarItem];
-    // Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if (![GDUserManager shareManager].user) {
+        GDLoginController *loginController = [[GDLoginController alloc] init];
+        UINavigationController *loginNavigationController = [[UINavigationController alloc] initWithRootViewController:loginController];
+        loginNavigationController.navigationBar.topItem.title = @"登陆";
+        [self presentViewController:loginNavigationController animated:YES completion:^{
+            [MBProgressHUD showErrorState:@"请先登录!" inView:nil];
+        }];
+    }
 }
 
 #pragma mark - private -
