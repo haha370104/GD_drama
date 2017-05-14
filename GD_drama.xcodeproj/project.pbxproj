@@ -15,6 +15,7 @@
 		7591A6731EAF1E320078F436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7591A6711EAF1E320078F436 /* LaunchScreen.storyboard */; };
 		7591A67E1EAF1E320078F436 /* GD_dramaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A67D1EAF1E320078F436 /* GD_dramaTests.m */; };
 		7591A6891EAF1E320078F436 /* GD_dramaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6881EAF1E320078F436 /* GD_dramaUITests.m */; };
+		E7552D5F23B4517A83882D6A /* Pods_GD_drama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		7591A6841EAF1E320078F436 /* GD_dramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GD_dramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A6881EAF1E320078F436 /* GD_dramaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GD_dramaUITests.m; sourceTree = "<group>"; };
 		7591A68A1EAF1E320078F436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A49E15ADB14D8A7BBAA16A26 /* Pods-GD_drama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.release.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.release.xcconfig"; sourceTree = "<group>"; };
+		C8085112DEA4D547AFE49F59 /* Pods-GD_drama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.debug.xcconfig"; sourceTree = "<group>"; };
+		FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GD_drama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7552D5F23B4517A83882D6A /* Pods_GD_drama.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D77C980BF3BBEEF772ADD72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8085112DEA4D547AFE49F59 /* Pods-GD_drama.debug.xcconfig */,
+				A49E15ADB14D8A7BBAA16A26 /* Pods-GD_drama.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50FCE571F3DEA2F1D83FFA44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7591A6571EAF1E320078F436 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				7591A67C1EAF1E320078F436 /* GD_dramaTests */,
 				7591A6871EAF1E320078F436 /* GD_dramaUITests */,
 				7591A6611EAF1E320078F436 /* Products */,
+				0D77C980BF3BBEEF772ADD72 /* Pods */,
+				50FCE571F3DEA2F1D83FFA44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7591A68D1EAF1E320078F436 /* Build configuration list for PBXNativeTarget "GD_drama" */;
 			buildPhases = (
+				07FAB1470A73CF93BED6E66B /* [CP] Check Pods Manifest.lock */,
 				7591A65C1EAF1E320078F436 /* Sources */,
 				7591A65D1EAF1E320078F436 /* Frameworks */,
 				7591A65E1EAF1E320078F436 /* Resources */,
+				6732F01FB6B8A2077A93C035 /* [CP] Embed Pods Frameworks */,
+				667A269F2E8D20991B97C738 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +297,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07FAB1470A73CF93BED6E66B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		667A269F2E8D20991B97C738 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6732F01FB6B8A2077A93C035 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7591A65C1EAF1E320078F436 /* Sources */ = {
@@ -425,6 +500,7 @@
 		};
 		7591A68E1EAF1E320078F436 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8085112DEA4D547AFE49F59 /* Pods-GD_drama.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
@@ -437,6 +513,7 @@
 		};
 		7591A68F1EAF1E320078F436 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A49E15ADB14D8A7BBAA16A26 /* Pods-GD_drama.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
