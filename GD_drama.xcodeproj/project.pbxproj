@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		7591A6651EAF1E320078F436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6641EAF1E320078F436 /* main.m */; };
 		7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6671EAF1E320078F436 /* AppDelegate.m */; };
-		7591A66B1EAF1E320078F436 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A66A1EAF1E320078F436 /* ViewController.m */; };
-		7591A66E1EAF1E320078F436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7591A66C1EAF1E320078F436 /* Main.storyboard */; };
 		7591A6701EAF1E320078F436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7591A66F1EAF1E320078F436 /* Assets.xcassets */; };
-		7591A6731EAF1E320078F436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7591A6711EAF1E320078F436 /* LaunchScreen.storyboard */; };
 		7591A67E1EAF1E320078F436 /* GD_dramaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A67D1EAF1E320078F436 /* GD_dramaTests.m */; };
 		7591A6891EAF1E320078F436 /* GD_dramaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6881EAF1E320078F436 /* GD_dramaUITests.m */; };
+		75D3F2CB1EC8560B007CA5A9 /* GDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2CA1EC8560B007CA5A9 /* GDTabBarController.m */; };
+		75D3F2D01EC856A4007CA5A9 /* GDMainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2CF1EC856A4007CA5A9 /* GDMainPageController.m */; };
+		75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */; };
+		75D3F2D61EC856E5007CA5A9 /* GDMyFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D51EC856E5007CA5A9 /* GDMyFavoriteController.m */; };
+		75D3F2D91EC856F6007CA5A9 /* GDUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */; };
 		E7552D5F23B4517A83882D6A /* Pods_GD_drama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +42,7 @@
 		7591A6641EAF1E320078F436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7591A6661EAF1E320078F436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7591A6671EAF1E320078F436 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7591A6691EAF1E320078F436 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7591A66A1EAF1E320078F436 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7591A66D1EAF1E320078F436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7591A66F1EAF1E320078F436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7591A6721EAF1E320078F436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7591A6741EAF1E320078F436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7591A6791EAF1E320078F436 /* GD_dramaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GD_dramaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A67D1EAF1E320078F436 /* GD_dramaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GD_dramaTests.m; sourceTree = "<group>"; };
@@ -52,6 +50,16 @@
 		7591A6841EAF1E320078F436 /* GD_dramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GD_dramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A6881EAF1E320078F436 /* GD_dramaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GD_dramaUITests.m; sourceTree = "<group>"; };
 		7591A68A1EAF1E320078F436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D3F2C91EC8560B007CA5A9 /* GDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTabBarController.h; sourceTree = "<group>"; };
+		75D3F2CA1EC8560B007CA5A9 /* GDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDTabBarController.m; sourceTree = "<group>"; };
+		75D3F2CE1EC856A4007CA5A9 /* GDMainPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMainPageController.h; sourceTree = "<group>"; };
+		75D3F2CF1EC856A4007CA5A9 /* GDMainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainPageController.m; sourceTree = "<group>"; };
+		75D3F2D11EC856C3007CA5A9 /* GDDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDownloadController.h; sourceTree = "<group>"; };
+		75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDownloadController.m; sourceTree = "<group>"; };
+		75D3F2D41EC856E5007CA5A9 /* GDMyFavoriteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMyFavoriteController.h; sourceTree = "<group>"; };
+		75D3F2D51EC856E5007CA5A9 /* GDMyFavoriteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMyFavoriteController.m; sourceTree = "<group>"; };
+		75D3F2D71EC856F6007CA5A9 /* GDUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUserInfoController.h; sourceTree = "<group>"; };
+		75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUserInfoController.m; sourceTree = "<group>"; };
 		A49E15ADB14D8A7BBAA16A26 /* Pods-GD_drama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.release.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.release.xcconfig"; sourceTree = "<group>"; };
 		C8085112DEA4D547AFE49F59 /* Pods-GD_drama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.debug.xcconfig"; sourceTree = "<group>"; };
 		FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GD_drama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,13 +133,10 @@
 		7591A6621EAF1E320078F436 /* GD_drama */ = {
 			isa = PBXGroup;
 			children = (
+				75D3F2C51EC85575007CA5A9 /* Controller */,
 				7591A6661EAF1E320078F436 /* AppDelegate.h */,
 				7591A6671EAF1E320078F436 /* AppDelegate.m */,
-				7591A6691EAF1E320078F436 /* ViewController.h */,
-				7591A66A1EAF1E320078F436 /* ViewController.m */,
-				7591A66C1EAF1E320078F436 /* Main.storyboard */,
 				7591A66F1EAF1E320078F436 /* Assets.xcassets */,
-				7591A6711EAF1E320078F436 /* LaunchScreen.storyboard */,
 				7591A6741EAF1E320078F436 /* Info.plist */,
 				7591A6631EAF1E320078F436 /* Supporting Files */,
 			);
@@ -162,6 +167,39 @@
 				7591A68A1EAF1E320078F436 /* Info.plist */,
 			);
 			path = GD_dramaUITests;
+			sourceTree = "<group>";
+		};
+		75D3F2C51EC85575007CA5A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				75D3F2CD1EC85684007CA5A9 /* MainPage */,
+				75D3F2CC1EC8566E007CA5A9 /* TabBar */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		75D3F2CC1EC8566E007CA5A9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				75D3F2C91EC8560B007CA5A9 /* GDTabBarController.h */,
+				75D3F2CA1EC8560B007CA5A9 /* GDTabBarController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		75D3F2CD1EC85684007CA5A9 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				75D3F2CE1EC856A4007CA5A9 /* GDMainPageController.h */,
+				75D3F2CF1EC856A4007CA5A9 /* GDMainPageController.m */,
+				75D3F2D11EC856C3007CA5A9 /* GDDownloadController.h */,
+				75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */,
+				75D3F2D41EC856E5007CA5A9 /* GDMyFavoriteController.h */,
+				75D3F2D51EC856E5007CA5A9 /* GDMyFavoriteController.m */,
+				75D3F2D71EC856F6007CA5A9 /* GDUserInfoController.h */,
+				75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */,
+			);
+			name = MainPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7591A6731EAF1E320078F436 /* LaunchScreen.storyboard in Resources */,
 				7591A6701EAF1E320078F436 /* Assets.xcassets in Resources */,
-				7591A66E1EAF1E320078F436 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7591A66B1EAF1E320078F436 /* ViewController.m in Sources */,
+				75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */,
+				75D3F2CB1EC8560B007CA5A9 /* GDTabBarController.m in Sources */,
+				75D3F2D61EC856E5007CA5A9 /* GDMyFavoriteController.m in Sources */,
+				75D3F2D91EC856F6007CA5A9 /* GDUserInfoController.m in Sources */,
 				7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */,
+				75D3F2D01EC856A4007CA5A9 /* GDMainPageController.m in Sources */,
 				7591A6651EAF1E320078F436 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,25 +427,6 @@
 			targetProxy = 7591A6851EAF1E320078F436 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7591A66C1EAF1E320078F436 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7591A66D1EAF1E320078F436 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7591A6711EAF1E320078F436 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7591A6721EAF1E320078F436 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7591A68B1EAF1E320078F436 /* Debug */ = {
@@ -593,6 +614,7 @@
 				7591A68F1EAF1E320078F436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7591A6901EAF1E320078F436 /* Build configuration list for PBXNativeTarget "GD_dramaTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +623,7 @@
 				7591A6921EAF1E320078F436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7591A6931EAF1E320078F436 /* Build configuration list for PBXNativeTarget "GD_dramaUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +632,7 @@
 				7591A6951EAF1E320078F436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
