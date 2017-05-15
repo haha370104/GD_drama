@@ -14,6 +14,9 @@
 #import "GDLoginController.h"
 
 #import "GDUserManager.h"
+#import "GDDramaAPI.h"
+#import "NSObject+GDTypeCheck.h"
+#import "NSObject+GDOperation.h"
 
 #import "MBProgressHUD+GDProgressHUD.h"
 
@@ -68,6 +71,30 @@
     GDUserInfoController *userInfoController = [[GDUserInfoController alloc] init];
     userInfoController.tabBarItem.title = @"我的";
     userInfoController.tabBarItem.image = [UIImage imageNamed:@"userinfo"];
+
+
+    [GDDramaAPI getHomePage:^(NSDictionary *response, BOOL success) {
+        if (success) {
+            mainController.categoryList = [[response dictionaryValueForKey:@"result"] gd_safeObjectAtIndex:0];
+        } else {
+            mainController.categoryList = @[
+                                            @{@"title" : @"喜剧",
+                                              @"image":@"xxxx"},
+                                            @{@"title" : @"恐怖",
+                                              @"image":@"xxxx"},
+                                            @{@"title" : @"惊悚",
+                                              @"image":@"xxxx"},
+                                            @{@"title" : @"剧情",
+                                              @"image":@"xxxx"},
+                                            @{@"title" : @"动作",
+                                              @"image":@"xxxx"},
+                                            @{@"title" : @"科幻",
+                                              @"image":@"xxxx"},
+                                            @{@"title" : @"悬疑",
+                                              @"image":@"xxxx"},
+                                            ];
+        }
+    }];
 
     self.viewControllers = @[mainNavigationController, downloadNavigationController, favoriteNavigationController, userInfoController];
 }

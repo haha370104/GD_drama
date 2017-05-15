@@ -18,14 +18,6 @@
 #define kGDAPI_LOGOUT_URL @"/api/user/logout"
 #define kGDAPI_CHECK_LOGIN_URL @"/api/user/info"
 
-#pragma mark - 包裹相关 -
+#pragma mark - 影片相关 -
 
-#define kGDAPI_SEARCH_PACKAGE_URL @"/api/parcel/path/search"
-#define kGDAPI_CONFIRM_PACKAGE_URL @"/api/parcel/path/confirm"
-#define kGDAPI_GET_ORDER @"/api/order"
-
-#pragma mark - 订单相关 -
-
-#define kGDAPI_GET_CONFIRM_ORDER_URL @"/api/order/confirmed"
-#define kGDAPI_GET_PASSING_ORDER_URL @"/api/order/passing"
-#define kGDAPI_GET_FINISHED_ORDER_URL @"/api/order/finished"
+#define kGDAPI_GET_HOME_PAGE_URL @"/api/drama/getHomePage"

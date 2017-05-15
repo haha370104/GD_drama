@@ -16,11 +16,15 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.0.2)
   - MBProgressHUD (0.9.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - MBProgressHUD (from `https://github.com/iException/MBProgressHUD.git`)
+  - SDWebImage
 
 EXTERNAL SOURCES:
   MBProgressHUD:
@@ -35,7 +39,8 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: c34da5f231d7c38b8bc9d2cb08f81509d0bea7b0
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 1e9962e05d63af11b77ecbb53599b511f5c07a84
+PODFILE CHECKSUM: ac3998b0551754320f2a3285ec8b67af307de0e1
 
 COCOAPODS: 1.2.0

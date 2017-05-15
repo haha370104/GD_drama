@@ -10,4 +10,8 @@
 
 @interface GDHomePageController : UIViewController
 
+@property (nonatomic, copy) NSArray<NSDictionary *> *categoryList;
+@property (nonatomic, copy) NSArray<NSDictionary *> *bannerImageList;
+@property (nonatomic, copy) NSArray<NSDictionary *> *guessYouLikeDramaList;
+
 @end

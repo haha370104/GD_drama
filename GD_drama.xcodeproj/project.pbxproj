@@ -24,6 +24,11 @@
 		7508131B1EC87CD300901868 /* GDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508131A1EC87CD300901868 /* GDUser.m */; };
 		750813201EC882BE00901868 /* GDFakeSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508131F1EC882BE00901868 /* GDFakeSearchBarView.m */; };
 		750813241EC88FB300901868 /* GDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813231EC88FB300901868 /* GDSearchViewController.m */; };
+		750813271EC9990000901868 /* GDImageAndTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813261EC9990000901868 /* GDImageAndTitleCollectionViewCell.m */; };
+		7508132A1EC99EB600901868 /* GDDramaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813291EC99EB600901868 /* GDDramaAPI.m */; };
+		7508132E1EC9B23300901868 /* GDDramaListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508132D1EC9B23300901868 /* GDDramaListController.m */; };
+		750813311EC9B24900901868 /* GDDramaInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813301EC9B24900901868 /* GDDramaInfoController.m */; };
+		750813341EC9B2B000901868 /* GDDramaRemarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813331EC9B2B000901868 /* GDDramaRemarkController.m */; };
 		7591A6651EAF1E320078F436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6641EAF1E320078F436 /* main.m */; };
 		7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6671EAF1E320078F436 /* AppDelegate.m */; };
 		7591A6701EAF1E320078F436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7591A66F1EAF1E320078F436 /* Assets.xcassets */; };
@@ -90,6 +95,16 @@
 		7508131F1EC882BE00901868 /* GDFakeSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDFakeSearchBarView.m; sourceTree = "<group>"; };
 		750813221EC88FB300901868 /* GDSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDSearchViewController.h; sourceTree = "<group>"; };
 		750813231EC88FB300901868 /* GDSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDSearchViewController.m; sourceTree = "<group>"; };
+		750813251EC9990000901868 /* GDImageAndTitleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDImageAndTitleCollectionViewCell.h; sourceTree = "<group>"; };
+		750813261EC9990000901868 /* GDImageAndTitleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDImageAndTitleCollectionViewCell.m; sourceTree = "<group>"; };
+		750813281EC99EB600901868 /* GDDramaAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDramaAPI.h; sourceTree = "<group>"; };
+		750813291EC99EB600901868 /* GDDramaAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaAPI.m; sourceTree = "<group>"; };
+		7508132C1EC9B23300901868 /* GDDramaListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDramaListController.h; sourceTree = "<group>"; };
+		7508132D1EC9B23300901868 /* GDDramaListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaListController.m; sourceTree = "<group>"; };
+		7508132F1EC9B24900901868 /* GDDramaInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDramaInfoController.h; sourceTree = "<group>"; };
+		750813301EC9B24900901868 /* GDDramaInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaInfoController.m; sourceTree = "<group>"; };
+		750813321EC9B2B000901868 /* GDDramaRemarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDramaRemarkController.h; sourceTree = "<group>"; };
+		750813331EC9B2B000901868 /* GDDramaRemarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaRemarkController.m; sourceTree = "<group>"; };
 		7591A6601EAF1E320078F436 /* GD_drama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GD_drama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A6641EAF1E320078F436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7591A6661EAF1E320078F436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,6 +221,8 @@
 				750813031EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m */,
 				750813041EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.h */,
 				750813051EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m */,
+				750813251EC9990000901868 /* GDImageAndTitleCollectionViewCell.h */,
+				750813261EC9990000901868 /* GDImageAndTitleCollectionViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -229,6 +246,8 @@
 				750813101EC8684300901868 /* GDHttpSessionManager.h */,
 				750813111EC8684300901868 /* GDHttpSessionManager.m */,
 				750813131EC868FB00901868 /* GDApiUrls.h */,
+				750813281EC99EB600901868 /* GDDramaAPI.h */,
+				750813291EC99EB600901868 /* GDDramaAPI.m */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -276,6 +295,19 @@
 				750813231EC88FB300901868 /* GDSearchViewController.m */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		7508132B1EC9B1DF00901868 /* Drama */ = {
+			isa = PBXGroup;
+			children = (
+				7508132C1EC9B23300901868 /* GDDramaListController.h */,
+				7508132D1EC9B23300901868 /* GDDramaListController.m */,
+				7508132F1EC9B24900901868 /* GDDramaInfoController.h */,
+				750813301EC9B24900901868 /* GDDramaInfoController.m */,
+				750813321EC9B2B000901868 /* GDDramaRemarkController.h */,
+				750813331EC9B2B000901868 /* GDDramaRemarkController.m */,
+			);
+			name = Drama;
 			sourceTree = "<group>";
 		};
 		7591A6571EAF1E320078F436 = {
@@ -345,6 +377,7 @@
 		75D3F2C51EC85575007CA5A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7508132B1EC9B1DF00901868 /* Drama */,
 				750813211EC88F9F00901868 /* Search */,
 				750813081EC8663200901868 /* Login */,
 				75D3F2CD1EC85684007CA5A9 /* MainPage */,
@@ -576,11 +609,16 @@
 				75D3F2D91EC856F6007CA5A9 /* GDUserInfoController.m in Sources */,
 				7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */,
 				750813121EC8684300901868 /* GDHttpSessionManager.m in Sources */,
+				750813311EC9B24900901868 /* GDDramaInfoController.m in Sources */,
 				750813061EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m in Sources */,
 				750812FA1EC861B100901868 /* GDActivityIndicatorView.m in Sources */,
 				7508131B1EC87CD300901868 /* GDUser.m in Sources */,
+				750813271EC9990000901868 /* GDImageAndTitleCollectionViewCell.m in Sources */,
 				7508130B1EC8664C00901868 /* GDRegisterController.m in Sources */,
+				7508132A1EC99EB600901868 /* GDDramaAPI.m in Sources */,
+				7508132E1EC9B23300901868 /* GDDramaListController.m in Sources */,
 				75D3F2D01EC856A4007CA5A9 /* GDHomePageController.m in Sources */,
+				750813341EC9B2B000901868 /* GDDramaRemarkController.m in Sources */,
 				750813241EC88FB300901868 /* GDSearchViewController.m in Sources */,
 				750812E81EC85DD700901868 /* GDLoginController.m in Sources */,
 				7508130E1EC867E200901868 /* GDUserAPI.m in Sources */,
