@@ -11,6 +11,6 @@
 @interface GDFakeSearchBarView : UIControl
 
 @property (nonatomic, strong, readonly) UIImageView *searchIcon;
-@property (nonatomic, strong, readonly) UILabel *placeholderLabel;
+@property (nonatomic, strong, readonly) UITextField *searchInput;
 
 @end

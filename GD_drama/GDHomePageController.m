@@ -20,7 +20,7 @@
 
 #import <Masonry/Masonry.h>
 
-@interface GDHomePageController ()<UIScrollViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource>
+@interface GDHomePageController ()<UIScrollViewDelegate, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) GDFakeSearchBarView *fakeSearchBarView;
 @property (nonatomic, strong) UIScrollView *contentScrollView;
@@ -69,6 +69,17 @@
 {
     NSInteger currentPage = scrollView.contentOffset.x / scrollView.frame.size.width;
     self.pageControl.currentPage = currentPage;
+}
+
+#pragma mark - UITextFieldDelegate -
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.fakeSearchBarView.searchInput) {
+        [textField resignFirstResponder];
+        NSLog(@"%@", textField.text);
+    }
+    return YES;
 }
 
 #pragma mark - UICollectionViewDataSource -
@@ -208,15 +219,6 @@
 
 #pragma mark - event -
 
-- (void)searchBarDidTapped
-{
-    GDSearchViewController *searchController = [[GDSearchViewController alloc] init];
-    UINavigationController *searchNavigationController = [[UINavigationController alloc] initWithRootViewController:searchController];
-    searchNavigationController.navigationBar.topItem.title = @"搜索影片";
-
-    [self presentViewController:searchNavigationController animated:YES completion:nil];
-}
-
 - (void)scrollPage:(id)sender
 {
     CGRect frame = self.bannerScrollView.bounds;
@@ -230,9 +232,7 @@
 {
     if (!_fakeSearchBarView) {
         _fakeSearchBarView = [[GDFakeSearchBarView alloc] init];
-        _fakeSearchBarView.placeholderLabel.text = @"搜索影片";
-        UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(searchBarDidTapped)];
-        [_fakeSearchBarView addGestureRecognizer:recognizer];
+        _fakeSearchBarView.searchInput.delegate = self;
     }
     return _fakeSearchBarView;
 }
