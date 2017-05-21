@@ -10,15 +10,17 @@
 #import "GDSearchViewController.h"
 #import "GDFakeSearchBarView.h"
 #import "GDImageAndTitleCollectionViewCell.h"
+#import "GDDramaCellInnerView.h"
 
 #import "UIColor+GDTheme.h"
 #import "UIFont+GDTheme.h"
 #import "NSObject+GDOperation.h"
 #import "NSObject+GDTypeCheck.h"
 #import "UIWindow+MainWindow.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
+#import <HCSStarRatingView/HCSStarRatingView.h>
 
 @interface GDHomePageController ()<UIScrollViewDelegate, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource>
 
@@ -29,8 +31,6 @@
 
 @property (nonatomic, strong) UIScrollView *bannerScrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
-
-@property (nonatomic, strong) UITableView *guessYouLikeTableView;
 
 @property (nonatomic, strong) UILabel *guessYouLikeLabel;
 
@@ -54,7 +54,6 @@
         [self.contentScrollView addSubview:self.bannerScrollView];
         [self.contentScrollView addSubview:self.pageControl];
         [self.contentScrollView addSubview:self.guessYouLikeLabel];
-        [self.contentScrollView addSubview:self.guessYouLikeTableView];
 
         self.view.backgroundColor = [UIColor gd_almostWhiteColor];
 
@@ -67,7 +66,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSInteger currentPage = scrollView.contentOffset.x / scrollView.frame.size.width;
+    NSInteger currentPage = round(scrollView.contentOffset.x / scrollView.frame.size.width);
     self.pageControl.currentPage = currentPage;
 }
 
@@ -171,13 +170,6 @@
         make.centerX.equalTo(self.contentScrollView);
         make.top.equalTo(self.bannerScrollView.mas_bottom).with.offset(20);
     }];
-    [self.guessYouLikeTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentScrollView);
-        make.width.equalTo(self.contentScrollView).multipliedBy(0.95f);
-        make.top.equalTo(self.guessYouLikeLabel.mas_bottom).with.offset(10);
-        make.height.equalTo(self.contentScrollView);
-        make.bottom.equalTo(self.contentScrollView);
-    }];
     
 }
 
@@ -215,6 +207,44 @@
     }];
 
     self.pageControl.numberOfPages = self.bannerImageList.count;
+}
+
+- (void)setupGuessYouLikeDramaListView
+{
+    NSMutableArray <GDDramaCellInnerView *> *guessYouLikeList = [[NSMutableArray alloc] init];
+    [self.guessYouLikeDramaList enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        GDDramaCellInnerView *cell = [[GDDramaCellInnerView alloc] init];
+        [cell.dramaImageView sd_setImageWithURL:[NSURL URLWithString:[obj stringValueForKey:@"image"]]];
+        cell.titleLabel.text = [obj stringValueForKey:@"title"];
+        cell.subtitleLabel.text = [obj stringValueForKey:@"subtitle"];
+        cell.starRatingView.value = [obj floatValueForKey:@"mark"];
+
+        [self.contentScrollView addSubview:cell];
+        [guessYouLikeList addObject:cell];
+        [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(self.contentScrollView);
+            make.height.equalTo(@(100));
+        }];
+    }];
+
+    for (GDDramaCellInnerView *cell in guessYouLikeList) {
+        if ([guessYouLikeList indexOfObject:cell] == 0) {
+            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.guessYouLikeLabel.mas_bottom).with.offset(10);
+            }];
+        } else {
+            NSInteger index = [guessYouLikeList indexOfObject:cell];
+            [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+                GDDramaCellInnerView *preCell = [guessYouLikeList gd_safeObjectAtIndex:index - 1];
+                make.top.equalTo(preCell.mas_bottom);
+            }];
+        }
+    }
+
+    GDDramaCellInnerView *cell = [guessYouLikeList lastObject];
+    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentScrollView);
+    }];
 }
 
 #pragma mark - event -
@@ -286,16 +316,6 @@
     return _pageControl;
 }
 
-- (UITableView *)guessYouLikeTableView
-{
-    if (!_guessYouLikeTableView) {
-        _guessYouLikeTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        _guessYouLikeTableView.delegate = self;
-        _guessYouLikeTableView.dataSource = self;
-    }
-    return _guessYouLikeTableView;
-}
-
 - (UILabel *)guessYouLikeLabel
 {
     if (!_guessYouLikeLabel) {
@@ -318,6 +338,12 @@
 {
     _bannerImageList = [bannerImageList copy];
     [self setupBannerScrollView];
+}
+
+- (void)setGuessYouLikeDramaList:(NSArray<NSDictionary *> *)guessYouLikeDramaList
+{
+    _guessYouLikeDramaList = [guessYouLikeDramaList copy];
+    [self setupGuessYouLikeDramaListView];
 }
 
 @end

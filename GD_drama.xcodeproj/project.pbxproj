@@ -29,6 +29,7 @@
 		7508132E1EC9B23300901868 /* GDDramaListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7508132D1EC9B23300901868 /* GDDramaListController.m */; };
 		750813311EC9B24900901868 /* GDDramaInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813301EC9B24900901868 /* GDDramaInfoController.m */; };
 		750813341EC9B2B000901868 /* GDDramaRemarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750813331EC9B2B000901868 /* GDDramaRemarkController.m */; };
+		758FF3B61ED1618F0027FD7A /* GDDramaCellInnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758FF3B51ED1618F0027FD7A /* GDDramaCellInnerView.m */; };
 		7591A6651EAF1E320078F436 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6641EAF1E320078F436 /* main.m */; };
 		7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591A6671EAF1E320078F436 /* AppDelegate.m */; };
 		7591A6701EAF1E320078F436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7591A66F1EAF1E320078F436 /* Assets.xcassets */; };
@@ -105,6 +106,8 @@
 		750813301EC9B24900901868 /* GDDramaInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaInfoController.m; sourceTree = "<group>"; };
 		750813321EC9B2B000901868 /* GDDramaRemarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDramaRemarkController.h; sourceTree = "<group>"; };
 		750813331EC9B2B000901868 /* GDDramaRemarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaRemarkController.m; sourceTree = "<group>"; };
+		758FF3B41ED1618F0027FD7A /* GDDramaCellInnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDDramaCellInnerView.h; sourceTree = "<group>"; };
+		758FF3B51ED1618F0027FD7A /* GDDramaCellInnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaCellInnerView.m; sourceTree = "<group>"; };
 		7591A6601EAF1E320078F436 /* GD_drama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GD_drama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591A6641EAF1E320078F436 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7591A6661EAF1E320078F436 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 		750812F71EC861A800901868 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				758FF3B31ED1616F0027FD7A /* CellInnerView */,
 				7508131D1EC8828C00901868 /* Animate */,
 				7508131C1EC8828300901868 /* Search */,
 				750813011EC8654B00901868 /* Cell */,
@@ -308,6 +312,15 @@
 				750813331EC9B2B000901868 /* GDDramaRemarkController.m */,
 			);
 			name = Drama;
+			sourceTree = "<group>";
+		};
+		758FF3B31ED1616F0027FD7A /* CellInnerView */ = {
+			isa = PBXGroup;
+			children = (
+				758FF3B41ED1618F0027FD7A /* GDDramaCellInnerView.h */,
+				758FF3B51ED1618F0027FD7A /* GDDramaCellInnerView.m */,
+			);
+			name = CellInnerView;
 			sourceTree = "<group>";
 		};
 		7591A6571EAF1E320078F436 = {
@@ -621,6 +634,7 @@
 				750813341EC9B2B000901868 /* GDDramaRemarkController.m in Sources */,
 				750813241EC88FB300901868 /* GDSearchViewController.m in Sources */,
 				750812E81EC85DD700901868 /* GDLoginController.m in Sources */,
+				758FF3B61ED1618F0027FD7A /* GDDramaCellInnerView.m in Sources */,
 				7508130E1EC867E200901868 /* GDUserAPI.m in Sources */,
 				7591A6651EAF1E320078F436 /* main.m in Sources */,
 				750813001EC8647A00901868 /* UIFont+GDTheme.m in Sources */,

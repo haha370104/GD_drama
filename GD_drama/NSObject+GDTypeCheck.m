@@ -105,5 +105,19 @@
     return 0;
 }
 
+- (CGFloat)floatValueForKey:(NSString *)key
+{
+    id value = [self gd_safeObjectForKey:key];
+
+    if ([value isKindOfClass:[NSNumber class]]) {
+        return [[value stringValue] doubleValue];
+    }
+
+    if ([value isKindOfClass:[NSString class]]) {
+        return [value doubleValue];
+    }
+
+    return 0;
+}
 
 @end

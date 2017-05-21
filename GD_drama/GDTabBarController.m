@@ -105,6 +105,14 @@
                                                @{@"image":@"http://i4.buimg.com/588926/6b9bbe19cf5c722a.png",
                                                  @"url":@"http://www.baidu.com"},
                                                ];
+
+            mainController.guessYouLikeDramaList = @[
+                                                     @{@"image":@"https://lh6.googleusercontent.com/-SEP_YUUoIOY/AAAAAAAAAAI/AAAAAAAAT4Q/HoHngJXNl-M/photo.jpg",
+                                                       @"title":@"生活大爆炸",
+                                                       @"subtitle":@"xxxxxx",
+                                                       @"mark":@(4.5),
+                                                         },
+                                                     ];
         }
     }];
 

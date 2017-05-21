@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
 @interface NSObject (GDOperation)
 
@@ -21,5 +22,7 @@
 - (NSNumber *)numberValueForKey:(NSString *)key;
 
 - (NSUInteger)integerValueForKey:(NSString *)key;
+
+- (CGFloat)floatValueForKey:(NSString *)key;
 
 @end
