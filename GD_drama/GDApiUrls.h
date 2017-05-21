@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kGDAPI_HOST @"http://ant-express.picfood.cn"
+#define kGDAPI_HOST @"xxxxx"
 
 #pragma mark - 用户相关 -
 

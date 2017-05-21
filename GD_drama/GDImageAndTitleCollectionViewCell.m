@@ -42,7 +42,6 @@
     [self.upImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).with.offset(10);
         make.centerX.equalTo(self.contentView);
-        make.top.equalTo(self.contentView);
     }];
 
     [self.downLabel mas_makeConstraints:^(MASConstraintMaker *make) {

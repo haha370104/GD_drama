@@ -93,6 +93,18 @@
                                             @{@"title" : @"悬疑",
                                               @"image":@"xxxx"},
                                             ];
+            mainController.bannerImageList = @[
+                                               @{@"image":@"http://i4.buimg.com/588926/0b4ea16d6b1f2de1.png",
+                                                 @"url":@"http://www.baidu.com"},
+                                               @{@"image":@"http://i2.muimg.com/588926/4ee887aff87a8a06.png",
+                                                 @"url":@"http://www.baidu.com"},
+                                               @{@"image":@"http://i4.buimg.com/588926/b6042130c879a7d4.png",
+                                                 @"url":@"http://www.baidu.com"},
+                                               @{@"image":@"http://i2.muimg.com/588926/b4dc0b39f1692197.png",
+                                                 @"url":@"http://www.baidu.com"},
+                                               @{@"image":@"http://i4.buimg.com/588926/6b9bbe19cf5c722a.png",
+                                                 @"url":@"http://www.baidu.com"},
+                                               ];
         }
     }];
 

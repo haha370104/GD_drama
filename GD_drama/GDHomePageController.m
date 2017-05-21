@@ -26,7 +26,10 @@
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
 @property (nonatomic, strong) UICollectionView *dramaCategoryCollectionView;
+
 @property (nonatomic, strong) UIScrollView *bannerScrollView;
+@property (nonatomic, strong) UIPageControl *pageControl;
+
 @property (nonatomic, strong) UITableView *guessYouLikeTableView;
 
 @property (nonatomic, strong) UILabel *guessYouLikeLabel;
@@ -49,6 +52,7 @@
 
         [self.contentScrollView addSubview:self.dramaCategoryCollectionView];
         [self.contentScrollView addSubview:self.bannerScrollView];
+        [self.contentScrollView addSubview:self.pageControl];
         [self.contentScrollView addSubview:self.guessYouLikeLabel];
         [self.contentScrollView addSubview:self.guessYouLikeTableView];
 
@@ -57,6 +61,14 @@
         [self setupConstraints];
     }
     return self;
+}
+
+#pragma mark - UIScrollViewDelegate -
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSInteger currentPage = scrollView.contentOffset.x / scrollView.frame.size.width;
+    self.pageControl.currentPage = currentPage;
 }
 
 #pragma mark - UICollectionViewDataSource -
@@ -139,6 +151,11 @@
         make.height.equalTo(self.contentScrollView).multipliedBy(0.2f);
     }];
 
+    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.bannerScrollView);
+        make.height.equalTo(@20.0f);
+    }];
+
     [self.guessYouLikeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentScrollView);
         make.top.equalTo(self.bannerScrollView.mas_bottom).with.offset(20);
@@ -161,8 +178,32 @@
         [imageView sd_setImageWithURL:[NSURL URLWithString:[obj stringValueForKey:@"image"]]];
         [imageViewList addObject:imageView];
 
-        
+        [self.bannerScrollView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.centerY.width.equalTo(self.bannerScrollView);
+        }];
     }];
+
+    for (UIImageView *imageView in imageViewList) {
+        if ([imageViewList indexOfObject:imageView] == 0) {
+            [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.bannerScrollView.mas_left);
+            }];
+        } else {
+            NSInteger index = [imageViewList indexOfObject:imageView];
+            [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+                UIImageView *preImageView = [imageViewList gd_safeObjectAtIndex:index - 1];
+                make.left.equalTo(preImageView.mas_right);
+            }];
+        }
+    }
+
+    UIImageView *imageView = [imageViewList lastObject];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.bannerScrollView.mas_right);
+    }];
+
+    self.pageControl.numberOfPages = self.bannerImageList.count;
 }
 
 #pragma mark - event -
@@ -174,6 +215,13 @@
     searchNavigationController.navigationBar.topItem.title = @"搜索影片";
 
     [self presentViewController:searchNavigationController animated:YES completion:nil];
+}
+
+- (void)scrollPage:(id)sender
+{
+    CGRect frame = self.bannerScrollView.bounds;
+    frame.origin.x = self.pageControl.currentPage * frame.size.width;
+    [self.bannerScrollView scrollRectToVisible:frame animated:YES];
 }
 
 #pragma mark - getter -
@@ -218,9 +266,24 @@
     if (!_bannerScrollView) {
         _bannerScrollView = [[UIScrollView alloc] init];
         _bannerScrollView.delegate = self;
-        _bannerScrollView.backgroundColor = [UIColor blackColor];
+        _bannerScrollView.backgroundColor = [UIColor gd_lightGrayColor];
+        _bannerScrollView.pagingEnabled = YES;
+        _bannerScrollView.showsVerticalScrollIndicator = NO;
+        _bannerScrollView.showsHorizontalScrollIndicator = NO;
+        _bannerScrollView.alwaysBounceHorizontal = YES;
     }
     return _bannerScrollView;
+}
+
+- (UIPageControl *)pageControl
+{
+    if (!_pageControl) {
+        _pageControl = [[UIPageControl alloc] init];
+        _pageControl.pageIndicatorTintColor = [UIColor gd_lightGrayColor];
+        _pageControl.currentPageIndicatorTintColor = [UIColor gd_radicalRedColor];
+        [_pageControl addTarget:self action:@selector(scrollPage:) forControlEvents:UIControlEventValueChanged];
+    }
+    return _pageControl;
 }
 
 - (UITableView *)guessYouLikeTableView
