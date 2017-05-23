@@ -7,5 +7,6 @@ target 'GD_drama' do
     pod 'AFNetworking'
     pod 'SDWebImage'
     pod 'HCSStarRatingView'
+    pod 'UCZProgressView'
     pod 'MBProgressHUD', :git => 'https://github.com/iException/MBProgressHUD.git'
 end

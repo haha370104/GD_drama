@@ -10,4 +10,6 @@
 
 @interface GDDownloadController : UIViewController
 
+@property (nonatomic, strong, readonly) UITableView *downloadTableView;
+
 @end

@@ -12,7 +12,6 @@
 #import "UIFont+GDTheme.h"
 #import "UIColor+GDTheme.h"
 
-#import <HCSStarRatingView/HCSStarRatingView.h>
 #import <Masonry/Masonry.h>
 
 @interface GDDramaCellInnerView ()

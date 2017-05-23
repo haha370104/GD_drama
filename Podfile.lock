@@ -20,6 +20,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - UCZProgressView (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD (from `https://github.com/iException/MBProgressHUD.git`)
   - SDWebImage
+  - UCZProgressView
 
 EXTERNAL SOURCES:
   MBProgressHUD:
@@ -43,7 +45,8 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: c34da5f231d7c38b8bc9d2cb08f81509d0bea7b0
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UCZProgressView: 55836987c15ee6efb7cd6dfe297556602ee46c94
 
-PODFILE CHECKSUM: 044bccd52577c6dfb11ffeb478babeb7a6e1db49
+PODFILE CHECKSUM: 444398f642affd19faea4324eddc02535c47f72e
 
 COCOAPODS: 1.2.0

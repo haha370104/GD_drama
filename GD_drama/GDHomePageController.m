@@ -7,10 +7,10 @@
 //
 
 #import "GDHomePageController.h"
-#import "GDSearchViewController.h"
 #import "GDFakeSearchBarView.h"
 #import "GDImageAndTitleCollectionViewCell.h"
 #import "GDDramaCellInnerView.h"
+#import "GDDramaListController.h"
 
 #import "UIColor+GDTheme.h"
 #import "UIFont+GDTheme.h"
@@ -20,9 +20,8 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
-#import <HCSStarRatingView/HCSStarRatingView.h>
 
-@interface GDHomePageController ()<UIScrollViewDelegate, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource>
+@interface GDHomePageController ()<UIScrollViewDelegate, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) GDFakeSearchBarView *fakeSearchBarView;
 @property (nonatomic, strong) UIScrollView *contentScrollView;
@@ -121,16 +120,12 @@
     return 0;
 }
 
-#pragma mark - UITableViewDataSource -
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.guessYouLikeDramaList.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return nil;
+    NSString *url = [[self.categoryList gd_safeObjectAtIndex:indexPath.item] stringValueForKey:@"url"];
+    GDDramaListController *controller = [[GDDramaListController alloc] initWithSourceUrl:url];
+    controller.title = [[self.categoryList gd_safeObjectAtIndex:indexPath.item] stringValueForKey:@"title"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - private -
@@ -301,6 +296,7 @@
         _bannerScrollView.showsVerticalScrollIndicator = NO;
         _bannerScrollView.showsHorizontalScrollIndicator = NO;
         _bannerScrollView.alwaysBounceHorizontal = YES;
+        _bannerScrollView.clipsToBounds = YES;
     }
     return _bannerScrollView;
 }

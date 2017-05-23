@@ -10,4 +10,6 @@
 
 @interface GDDramaListController : UIViewController
 
+- (instancetype)initWithSourceUrl: (NSString *)sourceUrl;
+
 @end

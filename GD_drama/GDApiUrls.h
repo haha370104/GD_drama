@@ -21,3 +21,4 @@
 #pragma mark - 影片相关 -
 
 #define kGDAPI_GET_HOME_PAGE_URL @"/api/drama/getHomePage"
+#define kGDAPI_GET_DOWNLOAD_LIST_URL @"/api/drama/getDownloadList"

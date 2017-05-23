@@ -7,31 +7,99 @@
 //
 
 #import "GDDramaListController.h"
+#import "GDDramaCollectionViewCell.h"
 
-@interface GDDramaListController ()
+#import "GDDramaAPI.h"
+
+#import "NSObject+GDTypeCheck.h"
+#import "NSObject+GDOperation.h"
+
+#import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface GDDramaListController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+
+@property (nonatomic, strong) UICollectionView *dramaCollectionView;
+
+@property (nonatomic, strong) NSString *sourceUrl;
+@property (nonatomic, copy) NSArray *dramaList;
 
 @end
 
 @implementation GDDramaListController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+#pragma mark - init -
+
+- (instancetype)initWithSourceUrl:(NSString *)sourceUrl
+{
+    if ((self = [super init])) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+        
+        [self.view addSubview:self.dramaCollectionView];
+        [self setupConstraints];
+
+        self.sourceUrl = sourceUrl;
+        [GDDramaAPI getDramaList:self.sourceUrl complete:^(NSDictionary *response, BOOL success) {
+            self.dramaList = [response arrayValueForKey:@"result"];
+            [self.dramaCollectionView reloadData];
+        }];
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UICollectionViewDataSource -
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.dramaList.count;
 }
-*/
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GDDramaCollectionViewCell *cell = [self.dramaCollectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([GDDramaCollectionViewCell class]) forIndexPath:indexPath];
+    NSDictionary *item = [self.dramaList gd_safeObjectAtIndex:indexPath.item];
+    [cell.innerView.dramaImageView sd_setImageWithURL:[NSURL URLWithString:[item stringValueForKey:@"image"]]];
+    cell.innerView.titleLabel.text = [item stringValueForKey:@"title"];
+    cell.innerView.subtitleLabel.text = [item stringValueForKey:@"subtitle"];
+    cell.innerView.starRatingView.value = [item floatValueForKey:@"mark"];
+
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(collectionView.frame.size.width, 100);
+}
+
+#pragma mark - private -
+
+- (void)setupConstraints
+{
+    [self.dramaCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.centerX.width.height.equalTo(self.view);
+    }];
+}
+
+#pragma mark - getter -
+
+- (UICollectionView *)dramaCollectionView
+{
+    if (!_dramaCollectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        _dramaCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+        _dramaCollectionView.delegate = self;
+        _dramaCollectionView.dataSource = self;
+        _dramaCollectionView.backgroundColor = [UIColor whiteColor];
+        [_dramaCollectionView registerClass:[GDDramaCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([GDDramaCollectionViewCell class])];
+    }
+    return _dramaCollectionView;
+}
 
 @end

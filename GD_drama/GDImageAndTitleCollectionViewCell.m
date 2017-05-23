@@ -57,6 +57,7 @@
 {
     if (!_upImageView) {
         _upImageView = [[UIImageView alloc] init];
+        _upImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _upImageView;
 }

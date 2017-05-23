@@ -79,19 +79,19 @@
         } else {
             mainController.categoryList = @[
                                             @{@"title" : @"喜剧",
-                                              @"image":@"xxxx"},
+                                              @"image":@"http://i2.muimg.com/588926/4220a89874aa1811.png"},
                                             @{@"title" : @"恐怖",
-                                              @"image":@"xxxx"},
-                                            @{@"title" : @"惊悚",
-                                              @"image":@"xxxx"},
+                                              @"image":@"http://i2.muimg.com/588926/e49a9e9969161476.png"},
+                                            @{@"title" : @"动画",
+                                              @"image":@"http://i1.piimg.com/588926/5d45b0762b557410.png"},
                                             @{@"title" : @"剧情",
-                                              @"image":@"xxxx"},
+                                              @"image":@"http://i2.muimg.com/588926/5453c85e33761dd0.png"},
                                             @{@"title" : @"动作",
-                                              @"image":@"xxxx"},
+                                              @"image":@"http://i1.piimg.com/588926/d0d465c8dd98d8b8.png"},
                                             @{@"title" : @"科幻",
-                                              @"image":@"xxxx"},
+                                              @"image":@"http://i2.muimg.com/588926/bd7506514494524c.png"},
                                             @{@"title" : @"悬疑",
-                                              @"image":@"xxxx"},
+                                              @"image":@"http://i2.muimg.com/588926/48a97cc428754b93.png"},
                                             ];
             mainController.bannerImageList = @[
                                                @{@"image":@"http://i4.buimg.com/588926/0b4ea16d6b1f2de1.png",

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HCSStarRatingView/HCSStarRatingView.h>
 
 @class HCSStarRatingView;
 
