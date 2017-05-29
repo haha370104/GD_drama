@@ -41,6 +41,10 @@
 		75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D21EC856C3007CA5A9 /* GDDownloadController.m */; };
 		75D3F2D61EC856E5007CA5A9 /* GDMyFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D51EC856E5007CA5A9 /* GDMyFavoriteController.m */; };
 		75D3F2D91EC856F6007CA5A9 /* GDUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */; };
+		75E9F61D1EDBC63500F2CF8B /* GDImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F61C1EDBC63500F2CF8B /* GDImageScrollView.m */; };
+		75E9F6211EDC169200F2CF8B /* GDBottomSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F6201EDC169200F2CF8B /* GDBottomSegmentView.m */; };
+		75E9F6241EDC170B00F2CF8B /* GDSegmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F6231EDC170B00F2CF8B /* GDSegmentItem.m */; };
+		75E9F6271EDC187A00F2CF8B /* GDSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F6261EDC187A00F2CF8B /* GDSegmentView.m */; };
 		E7552D5F23B4517A83882D6A /* Pods_GD_drama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +137,14 @@
 		75D3F2D51EC856E5007CA5A9 /* GDMyFavoriteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMyFavoriteController.m; sourceTree = "<group>"; };
 		75D3F2D71EC856F6007CA5A9 /* GDUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDUserInfoController.h; sourceTree = "<group>"; };
 		75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDUserInfoController.m; sourceTree = "<group>"; };
+		75E9F61B1EDBC63500F2CF8B /* GDImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDImageScrollView.h; sourceTree = "<group>"; };
+		75E9F61C1EDBC63500F2CF8B /* GDImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDImageScrollView.m; sourceTree = "<group>"; };
+		75E9F61F1EDC169200F2CF8B /* GDBottomSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDBottomSegmentView.h; sourceTree = "<group>"; };
+		75E9F6201EDC169200F2CF8B /* GDBottomSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDBottomSegmentView.m; sourceTree = "<group>"; };
+		75E9F6221EDC170B00F2CF8B /* GDSegmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDSegmentItem.h; sourceTree = "<group>"; };
+		75E9F6231EDC170B00F2CF8B /* GDSegmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDSegmentItem.m; sourceTree = "<group>"; };
+		75E9F6251EDC187A00F2CF8B /* GDSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDSegmentView.h; sourceTree = "<group>"; };
+		75E9F6261EDC187A00F2CF8B /* GDSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDSegmentView.m; sourceTree = "<group>"; };
 		A49E15ADB14D8A7BBAA16A26 /* Pods-GD_drama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.release.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.release.xcconfig"; sourceTree = "<group>"; };
 		C8085112DEA4D547AFE49F59 /* Pods-GD_drama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.debug.xcconfig"; sourceTree = "<group>"; };
 		FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GD_drama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,10 +225,13 @@
 		750812F71EC861A800901868 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75E9F61E1EDC165300F2CF8B /* DramaInfo */,
 				758FF3B31ED1616F0027FD7A /* CellInnerView */,
 				7508131D1EC8828C00901868 /* Animate */,
 				7508131C1EC8828300901868 /* Search */,
 				750813011EC8654B00901868 /* Cell */,
+				75E9F61B1EDBC63500F2CF8B /* GDImageScrollView.h */,
+				75E9F61C1EDBC63500F2CF8B /* GDImageScrollView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -277,6 +292,8 @@
 			children = (
 				750813191EC87CD300901868 /* GDUser.h */,
 				7508131A1EC87CD300901868 /* GDUser.m */,
+				75E9F6221EDC170B00F2CF8B /* GDSegmentItem.h */,
+				75E9F6231EDC170B00F2CF8B /* GDSegmentItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -418,6 +435,17 @@
 				75D3F2D81EC856F6007CA5A9 /* GDUserInfoController.m */,
 			);
 			name = MainPage;
+			sourceTree = "<group>";
+		};
+		75E9F61E1EDC165300F2CF8B /* DramaInfo */ = {
+			isa = PBXGroup;
+			children = (
+				75E9F61F1EDC169200F2CF8B /* GDBottomSegmentView.h */,
+				75E9F6201EDC169200F2CF8B /* GDBottomSegmentView.m */,
+				75E9F6251EDC187A00F2CF8B /* GDSegmentView.h */,
+				75E9F6261EDC187A00F2CF8B /* GDSegmentView.m */,
+			);
+			name = DramaInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +635,7 @@
 			files = (
 				750812F01EC8605400901868 /* NSObject+GDTypeCheck.m in Sources */,
 				750813201EC882BE00901868 /* GDFakeSearchBarView.m in Sources */,
+				75E9F6211EDC169200F2CF8B /* GDBottomSegmentView.m in Sources */,
 				750812FD1EC8620B00901868 /* UIColor+GDTheme.m in Sources */,
 				75D3F2D31EC856C3007CA5A9 /* GDDownloadController.m in Sources */,
 				750812F61EC8618600901868 /* UIWindow+MainWindow.m in Sources */,
@@ -620,14 +649,17 @@
 				7591A6681EAF1E320078F436 /* AppDelegate.m in Sources */,
 				750813121EC8684300901868 /* GDHttpSessionManager.m in Sources */,
 				750813311EC9B24900901868 /* GDDramaInfoController.m in Sources */,
+				75E9F61D1EDBC63500F2CF8B /* GDImageScrollView.m in Sources */,
 				750813061EC8655F00901868 /* GDLeftTextFieldRightCustomButtonTableViewCell.m in Sources */,
 				750812FA1EC861B100901868 /* GDActivityIndicatorView.m in Sources */,
 				7508131B1EC87CD300901868 /* GDUser.m in Sources */,
 				750813271EC9990000901868 /* GDImageAndTitleCollectionViewCell.m in Sources */,
 				7508130B1EC8664C00901868 /* GDRegisterController.m in Sources */,
+				75E9F6271EDC187A00F2CF8B /* GDSegmentView.m in Sources */,
 				758FF3BC1ED189CE0027FD7A /* GDDownloadTableViewCell.m in Sources */,
 				7508132A1EC99EB600901868 /* GDDramaAPI.m in Sources */,
 				758FF3B91ED17A510027FD7A /* GDDramaCollectionViewCell.m in Sources */,
+				75E9F6241EDC170B00F2CF8B /* GDSegmentItem.m in Sources */,
 				7508132E1EC9B23300901868 /* GDDramaListController.m in Sources */,
 				75D3F2D01EC856A4007CA5A9 /* GDHomePageController.m in Sources */,
 				750813341EC9B2B000901868 /* GDDramaRemarkController.m in Sources */,

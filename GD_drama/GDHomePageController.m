@@ -11,6 +11,7 @@
 #import "GDImageAndTitleCollectionViewCell.h"
 #import "GDDramaCellInnerView.h"
 #import "GDDramaListController.h"
+#import "GDImageScrollView.h"
 
 #import "UIColor+GDTheme.h"
 #import "UIFont+GDTheme.h"
@@ -21,15 +22,14 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
 
-@interface GDHomePageController ()<UIScrollViewDelegate, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+@interface GDHomePageController ()<UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) GDFakeSearchBarView *fakeSearchBarView;
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
 @property (nonatomic, strong) UICollectionView *dramaCategoryCollectionView;
 
-@property (nonatomic, strong) UIScrollView *bannerScrollView;
-@property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) GDImageScrollView *imageScrollView;
 
 @property (nonatomic, strong) UILabel *guessYouLikeLabel;
 
@@ -50,8 +50,7 @@
         [self.view addSubview:self.contentScrollView];
 
         [self.contentScrollView addSubview:self.dramaCategoryCollectionView];
-        [self.contentScrollView addSubview:self.bannerScrollView];
-        [self.contentScrollView addSubview:self.pageControl];
+        [self.contentScrollView addSubview:self.imageScrollView];
         [self.contentScrollView addSubview:self.guessYouLikeLabel];
 
         self.view.backgroundColor = [UIColor gd_almostWhiteColor];
@@ -59,14 +58,6 @@
         [self setupConstraints];
     }
     return self;
-}
-
-#pragma mark - UIScrollViewDelegate -
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    NSInteger currentPage = round(scrollView.contentOffset.x / scrollView.frame.size.width);
-    self.pageControl.currentPage = currentPage;
 }
 
 #pragma mark - UITextFieldDelegate -
@@ -149,59 +140,18 @@
         make.height.equalTo(self.contentScrollView).multipliedBy(0.3f);
     }];
 
-    [self.bannerScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.imageScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentScrollView);
         make.width.equalTo(self.contentScrollView).multipliedBy(0.95f);
         make.top.equalTo(self.dramaCategoryCollectionView.mas_bottom).with.offset(20);
         make.height.equalTo(self.contentScrollView).multipliedBy(0.2f);
     }];
 
-    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.bannerScrollView);
-        make.height.equalTo(@20.0f);
-    }];
-
     [self.guessYouLikeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentScrollView);
-        make.top.equalTo(self.bannerScrollView.mas_bottom).with.offset(20);
+        make.top.equalTo(self.imageScrollView.mas_bottom).with.offset(20);
     }];
     
-}
-
-- (void)setupBannerScrollView
-{
-    NSMutableArray <UIImageView *> *imageViewList = [NSMutableArray new];
-    [self.bannerImageList enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIImageView *imageView = [[UIImageView alloc] init];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:[obj stringValueForKey:@"image"]]];
-        [imageViewList addObject:imageView];
-
-        [self.bannerScrollView addSubview:imageView];
-        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.centerY.width.equalTo(self.bannerScrollView);
-        }];
-    }];
-
-    for (UIImageView *imageView in imageViewList) {
-        if ([imageViewList indexOfObject:imageView] == 0) {
-            [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.equalTo(self.bannerScrollView.mas_left);
-            }];
-        } else {
-            NSInteger index = [imageViewList indexOfObject:imageView];
-            [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                UIImageView *preImageView = [imageViewList gd_safeObjectAtIndex:index - 1];
-                make.left.equalTo(preImageView.mas_right);
-            }];
-        }
-    }
-
-    UIImageView *imageView = [imageViewList lastObject];
-    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.bannerScrollView.mas_right);
-    }];
-
-    self.pageControl.numberOfPages = self.bannerImageList.count;
 }
 
 - (void)setupGuessYouLikeDramaListView
@@ -242,15 +192,6 @@
     }];
 }
 
-#pragma mark - event -
-
-- (void)scrollPage:(id)sender
-{
-    CGRect frame = self.bannerScrollView.bounds;
-    frame.origin.x = self.pageControl.currentPage * frame.size.width;
-    [self.bannerScrollView scrollRectToVisible:frame animated:YES];
-}
-
 #pragma mark - getter -
 
 - (GDFakeSearchBarView *)fakeSearchBarView
@@ -271,6 +212,14 @@
     return _contentScrollView;
 }
 
+- (GDImageScrollView *)imageScrollView
+{
+    if (!_imageScrollView) {
+        _imageScrollView = [[GDImageScrollView alloc] init];
+    }
+    return _imageScrollView;
+}
+
 - (UICollectionView *)dramaCategoryCollectionView
 {
     if (!_dramaCategoryCollectionView) {
@@ -284,32 +233,6 @@
         [_dramaCategoryCollectionView registerClass:[GDImageAndTitleCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([GDImageAndTitleCollectionViewCell class])];
     }
     return _dramaCategoryCollectionView;
-}
-
-- (UIScrollView *)bannerScrollView
-{
-    if (!_bannerScrollView) {
-        _bannerScrollView = [[UIScrollView alloc] init];
-        _bannerScrollView.delegate = self;
-        _bannerScrollView.backgroundColor = [UIColor gd_lightGrayColor];
-        _bannerScrollView.pagingEnabled = YES;
-        _bannerScrollView.showsVerticalScrollIndicator = NO;
-        _bannerScrollView.showsHorizontalScrollIndicator = NO;
-        _bannerScrollView.alwaysBounceHorizontal = YES;
-        _bannerScrollView.clipsToBounds = YES;
-    }
-    return _bannerScrollView;
-}
-
-- (UIPageControl *)pageControl
-{
-    if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] init];
-        _pageControl.pageIndicatorTintColor = [UIColor gd_lightGrayColor];
-        _pageControl.currentPageIndicatorTintColor = [UIColor gd_radicalRedColor];
-        [_pageControl addTarget:self action:@selector(scrollPage:) forControlEvents:UIControlEventValueChanged];
-    }
-    return _pageControl;
 }
 
 - (UILabel *)guessYouLikeLabel
@@ -332,8 +255,7 @@
 
 - (void)setBannerImageList:(NSArray *)bannerImageList
 {
-    _bannerImageList = [bannerImageList copy];
-    [self setupBannerScrollView];
+    self.imageScrollView.imageList = bannerImageList;
 }
 
 - (void)setGuessYouLikeDramaList:(NSArray<NSDictionary *> *)guessYouLikeDramaList

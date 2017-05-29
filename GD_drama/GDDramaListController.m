@@ -78,6 +78,13 @@
     return CGSizeMake(collectionView.frame.size.width, 100);
 }
 
+#pragma mark - UICollectionViewDelegate -
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 #pragma mark - private -
 
 - (void)setupConstraints

@@ -7,31 +7,30 @@
 //
 
 #import "GDDramaInfoController.h"
+#import "GDImageScrollView.h"
 
 @interface GDDramaInfoController ()
+
+@property (nonatomic, strong) UICollectionView *contentView;
+
+@property (nonatomic, strong) UIView *bottomView;
+
+@property (nonatomic, copy) NSString *dramaID;
 
 @end
 
 @implementation GDDramaInfoController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+#pragma mark - init -
+
+- (instancetype)initWithDramaID: (NSString *)dramaID
+{
+    if ((self = [super init])) {
+        self.dramaID = dramaID;
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - private -
 
 @end
