@@ -50,6 +50,7 @@
 		75E9F6301EDC5BB200F2CF8B /* GDDramaMetaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F62F1EDC5BB200F2CF8B /* GDDramaMetaView.m */; };
 		75E9F6331EDC711900F2CF8B /* GDDramaListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F6321EDC711900F2CF8B /* GDDramaListView.m */; };
 		75E9F6371EDC953300F2CF8B /* GDPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F6361EDC953300F2CF8B /* GDPopMenuView.m */; };
+		75E9F63A1EDD5BB100F2CF8B /* GDScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E9F6391EDD5BB100F2CF8B /* GDScoreViewController.m */; };
 		E7552D5F23B4517A83882D6A /* Pods_GD_drama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +161,8 @@
 		75E9F6321EDC711900F2CF8B /* GDDramaListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDDramaListView.m; sourceTree = "<group>"; };
 		75E9F6351EDC953300F2CF8B /* GDPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPopMenuView.h; sourceTree = "<group>"; };
 		75E9F6361EDC953300F2CF8B /* GDPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPopMenuView.m; sourceTree = "<group>"; };
+		75E9F6381EDD5BB100F2CF8B /* GDScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDScoreViewController.h; sourceTree = "<group>"; };
+		75E9F6391EDD5BB100F2CF8B /* GDScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDScoreViewController.m; sourceTree = "<group>"; };
 		A49E15ADB14D8A7BBAA16A26 /* Pods-GD_drama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.release.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.release.xcconfig"; sourceTree = "<group>"; };
 		C8085112DEA4D547AFE49F59 /* Pods-GD_drama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GD_drama.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GD_drama/Pods-GD_drama.debug.xcconfig"; sourceTree = "<group>"; };
 		FC1649D549F363F7B481BABA /* Pods_GD_drama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GD_drama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +342,8 @@
 				750813301EC9B24900901868 /* GDDramaInfoController.m */,
 				750813321EC9B2B000901868 /* GDDramaRemarkController.h */,
 				750813331EC9B2B000901868 /* GDDramaRemarkController.m */,
+				75E9F6381EDD5BB100F2CF8B /* GDScoreViewController.h */,
+				75E9F6391EDD5BB100F2CF8B /* GDScoreViewController.m */,
 			);
 			name = Drama;
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 				750812EF1EC8605400901868 /* MBProgressHUD+GDProgressHUD.m in Sources */,
 				750813071EC8655F00901868 /* GDLeftTitleRightTextFieldTableViewCell.m in Sources */,
 				750812F31EC860D100901868 /* NSObject+GDOperation.m in Sources */,
+				75E9F63A1EDD5BB100F2CF8B /* GDScoreViewController.m in Sources */,
 				75D3F2D61EC856E5007CA5A9 /* GDMyFavoriteController.m in Sources */,
 				750813171EC87C7700901868 /* GDUserManager.m in Sources */,
 				75E9F62A1EDC215600F2CF8B /* GDDramaInfoCellInnerView.m in Sources */,

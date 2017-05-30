@@ -7,6 +7,7 @@
 //
 
 #import "GDDramaInfoController.h"
+#import "GDScoreViewController.h"
 #import "GDImageScrollView.h"
 #import "GDDramaTitleInnerView.h"
 #import "GDDramaMetaView.h"
@@ -17,6 +18,7 @@
 
 #import "NSObject+GDOperation.h"
 #import "NSObject+GDTypeCheck.h"
+#import "MBProgressHUD+GDProgressHUD.h"
 
 #import <Masonry/Masonry.h>
 
@@ -97,16 +99,16 @@
     }
 }
 
-//- (void)popoverMenu:(GDPopMenuView *)menu didClickMenuItemAtIndex:(NSInteger)index
-//{
-//    [self dismissPopoverMenu];
-//
-//    NSString *action = [self.popoverDataSource[index] bx_safeObjectForKey:kPopoverDataSourceActionKey];
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-//    [self performSelector:NSSelectorFromString(action) withObject:menu];
-//#pragma clang diagnostic pop
-//}
+- (void)popoverMenu:(GDPopMenuView *)menu didClickMenuItemAtIndex:(NSInteger)index
+{
+    [self dismissPopoverMenu];
+
+    if (index == 0) {
+        [self likeThisDrama];
+    } else {
+        [self scoreThisDrama];
+    }
+}
 
 #pragma mark - private -
 
@@ -187,6 +189,17 @@
 - (void)dismissPopoverMenu
 {
     [self.popoverMenu removeFromSuperview];
+}
+
+- (void)likeThisDrama
+{
+    [MBProgressHUD showSuccessState:@"已加入到我的喜欢" inView:nil];
+}
+
+- (void)scoreThisDrama
+{
+    GDScoreViewController *controller = [[GDScoreViewController alloc] initWithDramaID: self.dramaID];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - getter -
