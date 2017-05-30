@@ -66,6 +66,49 @@
     }];
 }
 
++ (void)getFavouriteList: (void(^)(NSDictionary *response, BOOL success))complete
+{
+    [[GDHttpSessionManager shareManager] getRequestByUrl:kGDAPI_GET_FAVOURITE_DRAMA_LIST_URL params:nil success:^(NSURLSessionDataTask *task, id data) {
+        if (complete) {
+            complete(data, YES);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+
+        NSDictionary *fakeResult = @{
+                                     @"code": @"200",
+                                     @"result": @[
+                                             @{@"image":@"https://lh6.googleusercontent.com/-SEP_YUUoIOY/AAAAAAAAAAI/AAAAAAAAT4Q/HoHngJXNl-M/photo.jpg",
+                                               @"id": @"1",
+                                               @"title":@"生活大爆炸",
+                                               @"subtitle":@"xxxxxx",
+                                               @"mark":@(4.5)},
+                                             @{@"image":@"https://lh6.googleusercontent.com/-SEP_YUUoIOY/AAAAAAAAAAI/AAAAAAAAT4Q/HoHngJXNl-M/photo.jpg",
+                                               @"id": @"2",
+                                               @"title":@"生活大爆炸",
+                                               @"subtitle":@"xxxxxx",
+                                               @"mark":@(4.5)},
+                                             @{@"image":@"https://lh6.googleusercontent.com/-SEP_YUUoIOY/AAAAAAAAAAI/AAAAAAAAT4Q/HoHngJXNl-M/photo.jpg",
+                                               @"id": @"3",
+                                               @"title":@"生活大爆炸",
+                                               @"subtitle":@"xxxxxx",
+                                               @"mark":@(4.5)},
+                                             @{@"image":@"https://lh6.googleusercontent.com/-SEP_YUUoIOY/AAAAAAAAAAI/AAAAAAAAT4Q/HoHngJXNl-M/photo.jpg",
+                                               @"id": @"4",
+                                               @"title":@"生活大爆炸",
+                                               @"subtitle":@"xxxxxx",
+                                               @"mark":@(4.5)},
+                                             @{@"image":@"https://lh6.googleusercontent.com/-SEP_YUUoIOY/AAAAAAAAAAI/AAAAAAAAT4Q/HoHngJXNl-M/photo.jpg",
+                                               @"id": @"5",
+                                               @"title":@"生活大爆炸",
+                                               @"subtitle":@"xxxxxx",
+                                               @"mark":@(4.5)},
+                                             ],
+                                     };
+
+        complete(fakeResult, NO);
+    }];
+}
+
 + (void)getDownloadList: (void(^)(NSDictionary *response, BOOL success))complete
 {
     [[GDHttpSessionManager shareManager] getRequestByUrl:kGDAPI_GET_DOWNLOAD_LIST_URL params:nil success:^(NSURLSessionDataTask *task, id data) {
