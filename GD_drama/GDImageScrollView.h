@@ -11,6 +11,6 @@
 @interface GDImageScrollView : UIView
 
 @property (nonatomic, strong, readonly) UIScrollView *imageScrollView;
-@property (nonatomic, copy) NSArray <NSDictionary *> *imageList;
+@property (nonatomic, copy) NSArray <NSString *> *imageList;
 
 @end

@@ -70,9 +70,9 @@
 - (void)setupBannerScrollView
 {
     NSMutableArray <UIImageView *> *imageViewList = [NSMutableArray new];
-    [self.imageList enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.imageList enumerateObjectsUsingBlock:^(NSString *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIImageView *imageView = [[UIImageView alloc] init];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:[obj stringValueForKey:@"image"]]];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:obj]];
         [imageViewList addObject:imageView];
 
         [self.imageScrollView addSubview:imageView];
@@ -131,7 +131,7 @@
     return _pageControl;
 }
 
-- (void)setImageList:(NSArray<NSDictionary *> *)imageList
+- (void)setImageList:(NSArray<NSString *> *)imageList
 {
     _imageList = [imageList copy];
     [self setupBannerScrollView];

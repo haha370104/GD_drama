@@ -10,4 +10,6 @@
 
 @interface GDDramaInfoController : UIViewController
 
+- (instancetype)initWithDramaID: (NSString *)dramaID;
+
 @end

@@ -13,5 +13,6 @@
 + (void)getHomePage:(void(^)(NSDictionary *response, BOOL success))complete;
 + (void)getDramaList: (NSString *)url complete: (void(^)(NSDictionary *response, BOOL success))complete;
 + (void)getDownloadList: (void(^)(NSDictionary *response, BOOL success))complete;
++ (void)getDramaInfo: (NSString *)dramaID complete: (void(^)(NSDictionary *response, BOOL success))complete;
 
 @end

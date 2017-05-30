@@ -22,3 +22,4 @@
 
 #define kGDAPI_GET_HOME_PAGE_URL @"/api/drama/getHomePage"
 #define kGDAPI_GET_DOWNLOAD_LIST_URL @"/api/drama/getDownloadList"
+#define kGDAPI_GET_DRAMA_INFO_URL @"/api/drama/getDramaInfo"

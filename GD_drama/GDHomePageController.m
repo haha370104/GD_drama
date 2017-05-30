@@ -255,7 +255,13 @@
 
 - (void)setBannerImageList:(NSArray *)bannerImageList
 {
-    self.imageScrollView.imageList = bannerImageList;
+    _bannerImageList = [_bannerImageList copy];
+
+    NSMutableArray <NSString *> *imageList = [[NSMutableArray alloc] init];
+    [bannerImageList enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [imageList addObject:[obj stringValueForKey:@"image"]];
+    }];
+    self.imageScrollView.imageList = imageList;
 }
 
 - (void)setGuessYouLikeDramaList:(NSArray<NSDictionary *> *)guessYouLikeDramaList

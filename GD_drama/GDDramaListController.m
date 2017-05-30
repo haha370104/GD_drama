@@ -8,6 +8,7 @@
 
 #import "GDDramaListController.h"
 #import "GDDramaCollectionViewCell.h"
+#import "GDDramaInfoController.h"
 
 #import "GDDramaAPI.h"
 
@@ -82,7 +83,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSInteger index = indexPath.item;
+    NSString *dramaID = [[self.dramaList gd_safeObjectAtIndex:index] stringValueForKey:@"id"];
+    GDDramaInfoController *controller = [[GDDramaInfoController alloc] initWithDramaID:dramaID];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - private -
